@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -20,7 +21,6 @@
       position: relative;
     }
 
-    /* Top Button */
     .top-btn {
       position: absolute;
       top: -50px;
@@ -37,18 +37,11 @@
       gap: 6px;
     }
 
-    .top-btn:hover {
-      background-color: #ccc;
-    }
+    .top-btn:hover { background-color: #ccc; }
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 25px;
-    }
+    h2 { font-size: 28px; margin-bottom: 25px; }
 
-    .contact-info {
-      margin-bottom: 40px;
-    }
+    .contact-info { margin-bottom: 40px; }
 
     .contact-info div {
       display: flex;
@@ -100,31 +93,17 @@
       gap: 8px;
     }
 
-    button:hover {
-      background-color: #ccc;
-    }
-
-    button i {
-      font-size: 14px;
-    }
+    button:hover { background-color: #ccc; }
 
     @media (max-width: 600px) {
-      .contact-section {
-        margin: 60px 20px;
-      }
-      .top-btn {
-        position: static;
-        display: inline-block;
-        margin-bottom: 20px;
-      }
+      body { font-size: 14px; }
+      .contact-section { margin: 40px 10px; padding: 10px; }
+      .top-btn { position: static; margin-bottom: 20px; }
+      h2 { font-size: 22px; }
     }
   </style>
-
-  <!-- Font Awesome for icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
   <section class="contact-section">
     <a href="index.html" class="top-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
 
@@ -132,29 +111,25 @@
 
     <div class="contact-info">
       <div><i class="fas fa-map-marker-alt"></i> Philippines, Digos</div>
-      <div><i class="fas fa-phone"></i> Phone:639306441846 </div>
+      <div><i class="fas fa-phone"></i> Phone: 639306441846</div>
       <div><i class="fas fa-envelope"></i> Email: mayphered1@gmail.com</div>
-      <div><i class="fa fa-facebook-official"></i>Facebook:<a href="https://web.facebook.com/wwawing" target="_blank" class="w3-hover-text-green">Maypheredwily Amarillo Valendez</a></div>
+      <div><i class="fab fa-facebook"></i> Facebook:
+        <a href="https://web.facebook.com/wwawing" target="_blank" class="w3-hover-text-green" style="color: #4caf50;">
+          Maypheredwily Amarillo Valendez
+        </a>
+      </div>
     </div>
 
-    <div></div>
     <p>Tell me if there's something wrong. Send me a message:</p>
-    </div>
 
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
-    </form>
+    <form action="mailto:mayphered1@gmail.com" method="post" enctype="text/plain">
+  <input type="text" name="Name" placeholder="Name" required>
+  <input type="email" name="Email" placeholder="Email" required>
+  <input type="text" name="Subject" placeholder="Subject">
+  <textarea name="Message" placeholder="Message"></textarea>
+  <button type="submit">SEND MESSAGE</button>
+</form>
+
   </section>
-
 </body>
 </html>
-
- 
-
-
-
-
