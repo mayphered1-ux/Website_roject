@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photos| Portfolio</title>
+  <title>Projects | Portfolio</title>
   <style>
     body {
       margin: 0;
@@ -14,6 +14,7 @@
       display: flex;
     }
 
+    /* Sidebar */
     .sidebar {
       width: 230px;
       height: 100vh;
@@ -56,6 +57,7 @@
       color: #0e0e0e;
     }
 
+    /* Main content area */
     .content {
       margin-left: 260px;
       padding: 40px 20px;
@@ -78,20 +80,23 @@
       background-color: #1a1a1a;
       box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      
+    }
 
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+    }
 
-.card:hover img {
-  transform: scale(5.0);
-}
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
 
-
-.card:active img {
-  transform: scale(5.0) translate(-50%, -50%);
-  position: relative;
-  left: 50%;
-  top: 50%;
-}
+    .card:hover img {
+      transform: scale(1.05);
+    }
 
     .card-content {
       padding: 25px;
@@ -140,7 +145,7 @@
   <div class="sidebar">
     <h1>My Works</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="project_1.html">Home</a>
       <a href="about.html">About</a>
       <a href="contacts.html">Contact</a>
     </nav>
@@ -152,7 +157,7 @@
       <div class="card">
         <img src="https://images.unsplash.com/photo-1762389475555-a5a6ccc5c456?auto=format&fit=crop&q=80&w=875">
         <div class="card-content">
-          <h3>Me myself and I</h3>
+           <h3>Me myself and I</h3>
           <p>A photo from highschool.</p>
         </div>
       </div>
@@ -168,7 +173,7 @@
       <div class="card">
         <img src="https://scontent.fmnl25-7.fna.fbcdn.net/v/t39.30808-6/592420927_834555609505132_3947754138192437687_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEv_uLYcrgg4Yr3wF_qAKSVVkohbI5S2exWSiFsjlLZ7LZACUrRTWFM-fFmlEvhEuCJQuLK-qLoohgl69Iu3t7p&_nc_ohc=EubM9kJz-2cQ7kNvwGWgN82&_nc_oc=AdmSd1EDqgeLfvmQ8BgQ07wOocl2B_CYplRFtJgVbhj7Pj9POWADTuK3IqCeVYTJCD0&_nc_zt=23&_nc_ht=scontent.fmnl25-7.fna&_nc_gid=wemjifgbj6G0WeSqPiz0Dw&oh=00_AfmzCwDdfL0Kaxmz1jlETUKTcM3b67zFC3ZlQCmtvR8DBw&oe=69360722">
         <div class="card-content">
-          <h3>Southern Ambassadors</h3>
+           <h3>Southern Ambassadors</h3>
           <p>The big part of my memories.</p>
         </div>
       </div>
@@ -177,7 +182,7 @@
         <img src="https://scontent.fmnl25-7.fna.fbcdn.net/v/t39.30808-6/592250904_835008879459805_2627091487060833049_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFJSBsmvi0oly2P0Q6LD3eJD91xSn6K2eoP3XFKforZ6opxB5oe2dL6HKpD-ktJcRpDtP45VrJ1q5QbFqVOn-_N&_nc_ohc=G_zInHf9B0EQ7kNvwEUCCji&_nc_oc=AdlOufYJHcZNLav7P8-XYKPpi6b1AKePd-3h-UUWr_f7Gjy7abdvInIrfEmcNm55lEk&_nc_zt=23&_nc_ht=scontent.fmnl25-7.fna&_nc_gid=WjiIRbGdLNVfHcklx_iPog&oh=00_AfnTWvQo9AC91L1WC22j54zIoF0ljKwNHjLXZ5JU1YIfdw&oe=69360C5F">
         <div class="card-content">
           <h3>Young and innocent me</h3>
-          </p> I don't know whenthis happen but it did.</p>
+          <p>I don't know whenthis happen but it did.</p>
         </div>
       </div>
     </section>
@@ -189,17 +194,6 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
