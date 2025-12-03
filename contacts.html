@@ -12,36 +12,73 @@
       font-family: 'Poppins', sans-serif;
       background-color: #000;
       color: #fff;
+      display: flex;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 230px;
+      height: 100vh;
+      background-color: #141414;
+      border-right: 1px solid #2a2a2a;
+      padding: 30px 20px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h1 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .sidebar nav a {
+      text-decoration: none;
+      color: #eaeaea;
+      font-weight: 500;
+      padding: 12px 20px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      transition: 0.3s;
+      text-align: center;
+      display: block;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #eaeaea;
+      color: #0e0e0e;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      margin-left: 260px;
+      padding: 40px 20px;
+      width: calc(100% - 260px);
     }
 
     .contact-section {
       max-width: 700px;
-      margin: 100px auto;
-      padding: 0 20px;
-      position: relative;
+      margin: auto;
+      padding: 20px;
     }
 
-    .top-btn {
-      position: absolute;
-      top: -50px;
-      right: 0;
-      background-color: #eaeaea;
-      color: #000;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    h2 { 
+      font-size: 28px; 
+      margin-bottom: 25px; 
     }
 
-    .top-btn:hover { background-color: #ccc; }
-
-    h2 { font-size: 28px; margin-bottom: 25px; }
-
-    .contact-info { margin-bottom: 40px; }
+    .contact-info { 
+      margin-bottom: 40px; 
+    }
 
     .contact-info div {
       display: flex;
@@ -62,7 +99,8 @@
       gap: 15px;
     }
 
-    form input, form textarea {
+    form input, 
+    form textarea {
       width: 100%;
       padding: 12px;
       background: #fff;
@@ -95,44 +133,74 @@
 
     button:hover { background-color: #ccc; }
 
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 180px;
+      }
+      .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+      }
+    }
+
     @media (max-width: 600px) {
-      body { font-size: 14px; }
-      .contact-section { margin: 40px 10px; padding: 10px; }
-      .top-btn { position: static; margin-bottom: 20px; }
+      .sidebar {
+        width: 160px;
+      }
+      .content {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+      }
       h2 { font-size: 22px; }
+      body { font-size: 14px; }
     }
   </style>
 </head>
 <body>
-  <section class="contact-section">
-    <a href="index.html" class="top-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
 
-    <h2>Contact Me</h2>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1>My Works</h1>
+    <nav>
+      <a href="project_1.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contacts.html">Contact</a>
+    </nav>
+  </div>
 
-    <div class="contact-info">
-      <div><i class="fas fa-map-marker-alt"></i> Philippines, Digos</div>
-      <div><i class="fas fa-phone"></i> Phone: 639306441846</div>
-      <div><i class="fas fa-envelope"></i> Email: mayphered1@gmail.com</div>
-      <div><i class="fab fa-facebook"></i> Facebook:
-        <a href="https://web.facebook.com/wwawing" target="_blank" class="w3-hover-text-green" style="color: #4caf50;">
-          Maypheredwily Amarillo Valendez
-        </a>
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <section class="contact-section">
+      
+      <h2>Contact Me</h2>
+
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i> Philippines, Digos</div>
+        <div><i class="fas fa-phone"></i> Phone: 639306441846</div>
+        <div><i class="fas fa-envelope"></i> Email: mayphered1@gmail.com</div>
+        <div><i class="fab fa-facebook"></i> Facebook:
+          <a href="https://web.facebook.com/wwawing" target="_blank" style="color: #4caf50;">
+            Maypheredwily Amarillo Valendez
+          </a>
+        </div>
       </div>
-    </div>
 
-    <p>Tell me if there's something wrong. Send me a message:</p>
+      <p>Tell me if there's something wrong. Send me a message:</p>
 
-    <form action="https://formspree.io/f/mvgveybw" method="POST">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="subject" placeholder="Subject">
-  <textarea name="message" placeholder="Message"></textarea>
-  <button type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
-</form>
+      <form action="https://formspree.io/f/mvgveybw" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> SEND MESSAGE</button>
+      </form>
 
+    </section>
+  </div>
 
-  </section>
 </body>
 </html>
+
+
 
 
