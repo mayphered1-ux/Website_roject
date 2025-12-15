@@ -61,6 +61,55 @@
       padding: 80px 20px;
     }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #0f0f0f;
+  border-right: 1px solid #2a2a2a;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #eaeaea;
+  padding: 12px 18px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+
+
+.hero,
+.skills-section,
+footer {
+  margin-left: 240px;
+}
+
     .skills-section h2 {
       text-align: center;
       color: #fff;
@@ -109,17 +158,29 @@
 
 <body>
 
-  <!-- Home Button -->
+<div class="sidebar">
+  <h2>Menu</h2>
+  <nav>
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="about.html"><i class="fa fa-user"></i> About</a>
+    <a href="projects.html"><i class="fa fa-briefcase"></i> Projects</a>
+    <a href="contacts.html"><i class="fa fa-envelope"></i> Contact</a>
+    <a href="skills.html"><i class="fa fa-code"></i> Skills</a>
+  </nav>
+</div>
+
+
+
   <a href="index.html" class="home-btn"><i class="fa fa-home"></i> Home</a>
   <a href="index.html" class="home-btn"><i class="fa fa-home"></i> Home</a>
 
-  <!-- Hero Section -->
+ 
   <section class="hero">
     <h1>Hello, I'm Wawing</h1>
     <p>A student from SPAC, and I study computer science, I also play volleyball, and also sing.</p>
   </section>
 
-  <!-- Skills Section -->
+ 
   <section class="skills-section">
     <h2>Things I do</h2>
     <div class="w3-content" style="max-width:700px">
@@ -147,13 +208,14 @@
   
   </section>
 
-  <!-- Footer -->
+  
   <footer>
     <p>&copy; 2025 Wawing Portfolio. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+
 
 
 
